@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Price Compare</title>
+	<link href="intro.css" rel="stylesheet" type="text/css" media="all">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  	<script src="https://kit.fontawesome.com/6b2b92f786.js" crossorigin="anonymous"></script>
+  	<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<style type="text/css">
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:50px; right:50px; width:90%; margin-top:0;  }
+	
+}	
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+		overflow-y: auto;
+	    max-height: 90vh;
+	    margin-top:4px;
+	}
+}
+/* ============ mobile view .end// ============ */
+</style>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        	element.addEventListener('click', function (e) {
+        		e.stopPropagation();
+        	});
+        })
+    }); 
+	// DOMContentLoaded  end
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+    $('.nav-toggle').click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('view more');
+            } else {
+                toggle_switch.html('view Less');
+            }
+        });
+    });
+
+});
+</script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="TopHeader ">
+			<b class="bold">Price compare</b>
+      		<button class='loginbtn'><a href="preprac.html">Login</a></button>
+			<form class="d-flex" id="searchInput">
+        		<input class="form-control me-2 btn btn-dark justify-content-md-center " type="search" placeholder="Search product or brand..." aria-label="Search">
+        		<button type="button" class="btn btn-primary">
+      				<span class="glyphicon glyphicon-search"></span> Search
+    			</button>
+      		</form>
+      	</div>
+		<nav class="navbar navbar-expand-lg justify-content-center " id="navbar">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
+			</button>
+			<div class="collapse navbar-collapse justify-content-md-center" id="MenuItems">
+				<ul class="navbar-nav mr-2" style="color:black;">
+					<li class="nav-item dropdown has-megamenu ">
+						<a class="nav-link dropdown-toggle  " href="#" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;" href="#">Mobiles</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-3">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+      										<li><a class="dropdown-item" href="#">Under 3000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 5000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 8000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 10000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 12000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 15000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 20000</a></li>
+     										<li><a class="dropdown-item" href="#">Under 50000</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     							<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+     									<h5 class="dropdown-header">Brand</h5>
+     									<ul class="list-unstyled">
+     										<li><a class="dropdown-item" href="#">Xiaomi</a></li>
+     										<li><a class="dropdown-item" href="#">Samsung</a></li>
+     										<li><a class="dropdown-item" href="#">Vivo</a></li>
+     										<li><a class="dropdown-item" href="#">Oppo</a></li>
+     										<li><a class="dropdown-item" href="#">Realme</a></li>
+     										<li><a class="dropdown-item" href="#">Apple</a></li>
+     										<li><a class="dropdown-item" href="#">Oneplus</a></li>
+     										<li><a class="dropdown-item" href="#">Redmi</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     							<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+      									<h5 class="dropdown-header">Ram</h5>
+      									<ul class="list-unstyled">
+      										<li><a class="dropdown-item" href="#">2GB</a></li>
+     										<li><a class="dropdown-item" href="#">4GB</a></li>
+     										<li><a class="dropdown-item" href="#">6GB</a></li>
+     										<li><a class="dropdown-item" href="#">8GB</a></li>
+     										<li><a class="dropdown-item" href="#">12GB</a></li>
+     										<li><a class="dropdown-item" href="#">above 12GB</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     							<div class="col-lg-2 col-3">
+									<div class="col-megamenu">
+     									<h5 class="dropdown-header">Screen Size</h5>
+     									<ul class="list-unstyled">
+      										<li><a class="dropdown-item" href="#">4 Inch</a></li>
+     										<li><a class="dropdown-item" href="#">4.5 Inch</a></li>
+     										<li><a class="dropdown-item" href="#">5 Inch</a></li>
+     										<li><a class="dropdown-item" href="#">5.5 Inch</a></li>
+     										<li><a class="dropdown-item" href="#">Above 5 Inch</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     							<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+     									<h5 class="dropdown-header">Battery</h5>
+     									<ul class="list-unstyled">
+     										<li><a class="dropdown-item" href="#">1000mAh</a></li>
+     										<li><a class="dropdown-item" href="#">2000mAh</a></li>
+     										<li><a class="dropdown-item" href="#">3000mAh</a></li>
+     										<li><a class="dropdown-item" href="#">5000mAh</a></li>
+     										<li><a class="dropdown-item" href="#">7000mAh</a></li>
+     										<li><a class="dropdown-item" href="#">10000mAh</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     							<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+										<h5 class="dropdown-header">Primary Camera</h5>
+										<ul class="list-unstyled">
+            		    				    <li><a href="#" class="dropdown-item">8 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">12 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">16 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">20 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">24 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">28 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">32 MP</a></li>
+            		    				</ul>
+            		    			</div>
+            		    		</div>
+            		    		<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+										<h5 class="dropdown-header">Front Camera</h5>
+            		    				<ul class="list-unstyled">
+            		    					<li><a href="#" class="dropdown-item">5 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">8 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">12 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">16 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">20 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">24 MP</a></li>
+            		    					<li><a href="#" class="dropdown-item">28 MP</a></li>
+            		    				</ul>
+            		    			</div>
+            		    		</div>
+            		    		<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+										<h5 class="dropdown-header">Primary Camera Features</h5>
+            		    				<ul class="list-unstyled">
+            		    					<li><a href="#" class="dropdown-item">Dual</a></li>
+            		    					<li><a href="#" class="dropdown-item">Triple</a></li>
+            		    					<li><a href="#" class="dropdown-item">Quad</a></li>
+            		    				</ul>
+            		    			</div>
+            		    		</div>
+            		    		<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+										<h5 class="dropdown-header">Processor Core</h5>
+            		    				<ul class="list-unstyled">
+            		    					<li><a href="#" class="dropdown-item">Dual Core</a></li>
+            		    					<li><a href="#" class="dropdown-item">Hexa Core</a></li>
+            		    					<li><a href="#" class="dropdown-item">Octa Core</a></li>
+            		    					<li><a href="#" class="dropdown-item">Quad Core</a></li>
+            		    					<li><a href="#" class="dropdown-item">Single Core</a></li>
+            		    					<li><a href="#" class="dropdown-item">Deca Core</a></li>
+            		    				</ul>
+            		    			</div>
+            		    		</div>
+            		    		<div class="col-lg-2 col-3">
+									<div class="col-megamenu ">
+										<h5 class="dropdown-header">Chipsets</h5>
+            		    				<ul class="list-unstyled">
+            		    					<li><a href="#" class="dropdown-item">Snapdragon</a></li>
+            		    					<li><a href="#" class="dropdown-item">MediaTek</a></li>
+            		    					<li><a href="#" class="dropdown-item">Exynos</a></li>
+            		    					<li><a href="#" class="dropdown-item">Kirin</a></li>
+            		    				</ul>
+            		    			</div>
+            		    		</div>
+     						</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Laptops</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">under 15000</a></li>
+            								<li><a href="" class="dropdown-item">under 20000</a></li>
+            								<li><a href="" class="dropdown-item">under 25000</a></li>
+            								<li><a href="" class="dropdown-item">under 30000</a></li>
+            								<li><a href="" class="dropdown-item">under 35000</a></li>
+            								<li><a href="" class="dropdown-item">under 40000</a></li>
+            								<li><a href="" class="dropdown-item">under 45000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">HP</a></li>
+            								<li><a href="" class="dropdown-item">Dell</a></li>
+            								<li><a href="" class="dropdown-item">Apple</a></li>
+            								<li><a href="" class="dropdown-item">Lenovo</a></li>
+            								<li><a href="" class="dropdown-item">Acer</a></li>
+            								<li><a href="" class="dropdown-item">Asus</a></li>
+            								<li><a href="" class="dropdown-item">Microsoft</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">12 Inch</a></li>
+            								<li><a href="" class="dropdown-item">13 Inch</a></li>
+            								<li><a href="" class="dropdown-item">14 Inch</a></li>
+            								<li><a href="" class="dropdown-item">15 Inch</a></li>
+            								<li><a href="" class="dropdown-item">16 Inch</a></li>
+            								<li><a href="" class="dropdown-item">17 Inch</a></li>
+            								<li><a href="" class="dropdown-item">Above 17 Inch</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">HD</a></li>
+            								<li><a href="" class="dropdown-item">Full HD</a></li>
+            								<li><a href="" class="dropdown-item">Quad HD</a></li>
+            								<li><a href="" class="dropdown-item">Ultra HD</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Windows 10</a></li>
+            								<li><a href="" class="dropdown-item">Linux</a></li>
+            								<li><a href="" class="dropdown-item">DOS</a></li>
+            								<li><a href="" class="dropdown-item">Ubuntu</a></li>
+            								<li><a href="" class="dropdown-item">Chrome OS</a></li>
+            								<li><a href="" class="dropdown-item">Windows 8</a></li>
+            								<li><a href="" class="dropdown-item">Mac OS</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">White</a></li>
+            								<li><a href="" class="dropdown-item">Black</a></li>
+            								<li><a href="" class="dropdown-item">Blue</a></li>
+            								<li><a href="" class="dropdown-item">Grey</a></li>
+            								<li><a href="" class="dropdown-item">Multi Color</a></li>
+            								<li><a href="" class="dropdown-item">Gold</a></li>
+            								<li><a href="" class="dropdown-item">Silver</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">32 GB</a></li>
+            								<li><a href=""class="dropdown-item">24 GB</a></li>
+            								<li><a href="" class="dropdown-item">16 GB</a></li>
+            								<li><a href="" class="dropdown-item">8 GB</a></li>
+            								<li><a href="" class="dropdown-item">6 GB</a></li>
+            								<li><a href="" class="dropdown-item">4 GB</a></li>
+            								<li><a href="" class="dropdown-item">2 GB</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Core i5</a></li>
+            								<li><a href="" class="dropdown-item">Core i7</a></li>
+            								<li><a href="" class="dropdown-item">Core i3</a></li>
+            								<li><a href="" class="dropdown-item">Core i9</a></li>
+            								<li><a href="" class="dropdown-item">Atom</a></li>
+           									<li><a href="" class="dropdown-item">Celeron</a></li>
+           									<li><a href="" class="dropdown-item">Pentium Quad Core</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">DDR4</a></li>
+            								<li><a href="" class="dropdown-item">LPDDR4X</a></li>
+            								<li><a href="" class="dropdown-item">LPDDR3</a></li>
+            								<li><a href="" class="dropdown-item">DDR3</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Refrigerators</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Under 10000</a></li>
+											<li><a href="#" class="dropdown-item">Under 12000</a></li>
+											<li><a href="#" class="dropdown-item">Under 15000</a></li>
+											<li><a href="#" class="dropdown-item">Under 20000</a></li>
+											<li><a href="#" class="dropdown-item">Under 25000</a></li>
+											<li><a href="#" class="dropdown-item">Under 30000</a></li>
+											<li><a href="#" class="dropdown-item">Under 50000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">LG</a></li>
+											<li><a href="#" class="dropdown-item">Samsung</a></li>
+											<li><a href="#" class="dropdown-item">Haier</a></li>
+											<li><a href="#" class="dropdown-item">Whirlpool</a></li>
+											<li><a href="#" class="dropdown-item">Godrej</a></li>
+											<li><a href="#" class="dropdown-item">Panasonic</a></li>
+											<li><a href="#" class="dropdown-item">Bosch</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Capacity</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">250 Litres</a></li>
+											<li><a href="#" class="dropdown-item">300 Litres</a></li>
+											<li><a href="#" class="dropdown-item">400 Litres</a></li>
+											<li><a href="#" class="dropdown-item">Above 400 Litres</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Refrigerator Type</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Single Door</a></li>
+											<li><a href="#" class="dropdown-item">Double Door</a></li>
+											<li><a href="#" class="dropdown-item">Triple Door</a></li>
+											<li><a href="#" class="dropdown-item">French Door</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Color</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Silver</a></li>
+											<li><a href="#" class="dropdown-item">Black</a></li>
+											<li><a href="#" class="dropdown-item">Red</a></li>
+											<li><a href="#" class="dropdown-item">Maroon</a></li>
+											<li><a href="#" class="dropdown-item">White</a></li>
+											<li><a href="#" class="dropdown-item">Blue</a></li>
+											<li><a href="#" class="dropdown-item">Pink</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Other Features</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Water Dispenser</a></li>
+											<li><a href="#" class="dropdown-item">Child locks</a></li>
+											<li><a href="#" class="dropdown-item">Deodorizer Technology</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" style="color: black;" href="#">Air Conditioners</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Under 20000</a></li>
+											<li><a href="#" class="dropdown-item">Under 25000</a></li>
+											<li><a href="#" class="dropdown-item">Under 30000</a></li>
+											<li><a href="#" class="dropdown-item">Under 35000</a></li>
+											<li><a href="#" class="dropdown-item">Under 40000</a></li>
+											<li><a href="#" class="dropdown-item">Under 50000</a></li>
+											<li><a href="#" class="dropdown-item">Above 50000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Blue Star</a></li>
+											<li><a href="#" class="dropdown-item">Voltas</a></li>
+											<li><a href="#" class="dropdown-item">Samsung</a></li>
+											<li><a href="#" class="dropdown-item">LG</a></li>
+											<li><a href="#" class="dropdown-item">Lloyd</a></li>
+											<li><a href="#" class="dropdown-item">Godrej</a></li>
+											<li><a href="#" class="dropdown-item">Daikin</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">AC Type</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Portable</a></li>
+											<li><a href="#" class="dropdown-item">Split</a></li>
+											<li><a href="#" class="dropdown-item">Window</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Capacity</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">1 Ton</a></li>
+											<li><a href="#" class="dropdown-item">1.5 Ton</a></li>
+											<li><a href="#" class="dropdown-item">2 Ton</a></li>
+											<li><a href="#" class="dropdown-item">2.5 Ton</a></li>
+											<li><a href="#" class="dropdown-item">3 Ton</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Coil Material</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Copper Condenser Coil</a></li>
+											<li><a href="#" class="dropdown-item">Aluminium Condenser Coil</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Special Features</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Hot &amp; Cold</a></li>
+											<li><a href="#" class="dropdown-item">Auto Restart</a></li>
+											<li><a href="#" class="dropdown-item">Anti Bacteria Filter</a></li>
+											<li><a href="#" class="dropdown-item">Dehumidifier</a></li>
+											<li><a href="#" class="dropdown-item">Auto Clean</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Washing Machines</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Under 10000</a></li>
+											<li><a href="#" class="dropdown-item">Under 12000</a></li>
+											<li><a href="#" class="dropdown-item">Under 15000</a></li>
+											<li><a href="#" class="dropdown-item">Under 20000</a></li>
+											<li><a href="#" class="dropdown-item">Under 25000</a></li>
+											<li><a href="#" class="dropdown-item">Under 30000</a></li>
+											<li><a href="#" class="dropdown-item">Above 30000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">LG</a></li>
+											<li><a href="#" class="dropdown-item">IFB</a></li>
+											<li><a href="#" class="dropdown-item">Samsung</a></li>
+											<li><a href="#" class="dropdown-item">Whirlpool</a></li>
+											<li><a href="#" class="dropdown-item">Bosch</a></li>
+											<li><a href="#" class="dropdown-item">Haier</a></li>
+											<li><a href="#" class="dropdown-item">Godrej</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Capacity</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">6 Kg</a></li>
+											<li><a href="#" class="dropdown-item">7 Kg</a></li>
+											<li><a href="#" class="dropdown-item">8 Kg</a></li>
+											<li><a href="#" class="dropdown-item">9 Kg</a></li>
+											<li><a href="#" class="dropdown-item">10 Kg</a></li>
+											<li><a href="#" class="dropdown-item">Above 10 Kg</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Control</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Fully Automatic</a></li>
+											<li><a href="#" class="dropdown-item">Semi Automatic</a></li>
+										</ul>
+									</div>
+								</div><div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Other Features</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Front Load</a></li>
+											<li><a href="#" class="dropdown-item">Top Load</a></li>
+											<li><a href="#" class="dropdown-item">Dryer</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Televisions</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">under 5000</a></li>
+											<li><a href="" class="dropdown-item">under 10000</a></li>
+											<li><a href="" class="dropdown-item">under 15000</a></li>
+											<li><a href="" class="dropdown-item">under 20000</a></li>
+											<li><a href="" class="dropdown-item">under 25000</a></li>
+											<li><a href="" class="dropdown-item">under 30000</a></li>
+											<li><a href="" class="dropdown-item">under 40000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Sony</a></li>
+											<li><a href="" class="dropdown-item">OnePlus</a></li>
+											<li><a href="" class="dropdown-item">VU</a></li>
+											<li><a href="" class="dropdown-item">LG</a></li>
+											<li><a href="" class="dropdown-item">Samsung</a></li>
+											<li><a href="" class="dropdown-item">TCL</a></li>
+											<li><a href="" class="dropdown-item">Nokia</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Display Type</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">LED</a></li>
+											<li><a href="" class="dropdown-item">OLED</a></li>
+											<li><a href="" class="dropdown-item">QLED</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">USB Port</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">One USB Port</a></li>
+											<li><a href="" class="dropdown-item">Two USB Ports</a></li>
+											<li><a href="" class="dropdown-item">Three USB Ports</a></li>
+											<li><a href="" class="dropdown-item">Four USB Ports</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Screen Sizes</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">21 Inch</a></li>
+											<li><a href="" class="dropdown-item">22 Inch</a></li>
+											<li><a href="" class="dropdown-item">24 Inch</a></li>
+											<li><a href="" class="dropdown-item">32 Inch</a></li>
+											<li><a href="" class="dropdown-item">40 Inch</a></li>
+											<li><a href="" class="dropdown-item">42 Inch</a></li>
+											<li><a href="" class="dropdown-item">43 Inch</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Display Resolution</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">HD Ready</a></li>
+											<li><a href="" class="dropdown-item">Full HD</a></li>
+											<li><a href="" class="dropdown-item">Ultra HD (4K)</a></li>
+											<li><a href="" class="dropdown-item">Ultra HD (8K)</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">HDMI Ports</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">One HDMI Port</a></li>
+											<li><a href="" class="dropdown-item">Two HDMI Ports</a></li>
+											<li><a href="" class="dropdown-item">Three HDMI Ports</a></li>
+											<li><a href="" class="dropdown-item">Four HDMI Ports</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Features</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Smart</a></li>
+											<li><a href="" class="dropdown-item">3D</a></li>
+											<li><a href="" class="dropdown-item">Wi-Fi</a></li>
+											<li><a href="" class="dropdown-item">Curved</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle"role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Dishwashers</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Under 20000</a></li>
+											<li><a href="#" class="dropdown-item">Under 25000</a></li>
+											<li><a href="#" class="dropdown-item">Under 30000</a></li>
+											<li><a href="#" class="dropdown-item">Above 35000</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">IFB</a></li>
+											<li><a href="#" class="dropdown-item">Bosch</a></li>
+											<li><a href="#" class="dropdown-item">Faber</a></li>
+											<li><a href="#" class="dropdown-item">LG</a></li>
+											<li><a href="#" class="dropdown-item">Siemens</a></li>
+											<li><a href="#" class="dropdown-item">MODA Germany</a></li>
+											<li><a href="#" class="dropdown-item">Galanz</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Type</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Built-in</a></li>
+											<li><a href="#" class="dropdown-item">Free Standing</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Capacity</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">4 Place Settings</a></li>
+											<li><a href="#" class="dropdown-item">8 Place Settings</a></li>
+											<li><a href="#" class="dropdown-item">12 Place Settings</a></li>
+											<li><a href="#" class="dropdown-item">13 Place Settings</a></li>
+											<li><a href="#" class="dropdown-item">14 Place Settings</a></li>
+											<li><a href="#" class="dropdown-item">15 Place Settings</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Power Consumption</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">500 KWH</a></li>
+											<li><a href="#" class="dropdown-item">1000 KWH</a></li>
+											<li><a href="#" class="dropdown-item">1500 KWH</a></li>
+											<li><a href="#" class="dropdown-item">2000 KWH</a></li>
+											<li><a href="#" class="dropdown-item">Above 2000 KWH</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Water Consumption</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Under 10 Ltr</a></li>
+											<li><a href="#" class="dropdown-item">15 Ltr</a></li>
+											<li><a href="#" class="dropdown-item">20 Ltr</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: black;" href="#">Compare</a>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">More</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Popular Categories</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Mobiles</a></li>
+											<li><a href="" class="dropdown-item">Tablets</a></li>
+											<li><a href="" class="dropdown-item">Cameras</a></li>
+											<li><a href="" class="dropdown-item">Laptops</a></li>
+											<li><a href="" class="dropdown-item">Televisions</a></li>
+											<li><a href="" class="dropdown-item">Air Conditioners</a></li>
+											<li><a href="" class="dropdown-item">Shoes</a></li>
+											<li><a href="" class="dropdown-item">Watches</a></li>
+											<li><a href="" class="dropdown-item">Set Top Boxes</a></li>
+											<li><a href="" class="dropdown-item">Speakers</a></li>
+											<li><a href="" class="dropdown-item">Home Theatre Systems</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Home Appliances</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Washing Machines &amp; Dryers</a></li>
+											<li><a href="" class="dropdown-item">Refrigerators</a></li>
+											<li><a href="" class="dropdown-item">Water Purifiers</a></li>
+											<li><a href="" class="dropdown-item">Vacuum &amp; Window Cleaners</a></li>
+											<li><a href="" class="dropdown-item">Microwave Ovens</a></li>
+											<li><a href="" class="dropdown-item">Induction Cooktops</a></li>
+											<li><a href="" class="dropdown-item">Juicer Mixer &amp; Grinder</a></li>
+											<li><a href="" class="dropdown-item">Food Processors</a></li>
+											<li><a href="" class="dropdown-item">Electric Kettle</a></li>
+											<li><a href="" class="dropdown-item">Hand Blenders</a></li>
+											<li><a href="" class="dropdown-item">Coffee Makers</a></li>
+											<li><a href="" class="dropdown-item">Pop Up Toasters</a></li>
+											<li><a href="" class="dropdown-item">Sandwich Maker</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Men's Clothing</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">T-Shirts</a></li>
+											<li><a href="" class="dropdown-item">Shirts</a></li>
+											<li><a href="" class="dropdown-item">Jeans</a></li>
+											<li><a href="" class="dropdown-item">Cargos</a></li>
+											<li><a href="" class="dropdown-item">Blazers</a></li>
+											<li><a href="" class="dropdown-item">Kurtas</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Women's Clothing</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Leggings</a></li>
+											<li><a href="" class="dropdown-item">Skirts</a></li>
+											<li><a href="" class="dropdown-item">Lingeries</a></li>
+											<li><a href="" class="dropdown-item">Night Wear</a></li>
+											<li><a href="" class="dropdown-item">Kurtis</a></li>
+											<li><a href="" class="dropdown-item">Sarees</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Bike Accessories</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Tyres</a></li>
+											<li><a href="" class="dropdown-item">Helmets</a></li>
+											<li><a href="" class="dropdown-item">Body Covers</a></li>
+											<li><a href="" class="dropdown-item">Seat Covers</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Mobile Accessories</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Bluetooth Headsets</a></li>
+											<li><a href="" class="dropdown-item">Mobile Chargers</a></li>
+											<li><a href="" class="dropdown-item">Mobiles Cases &amp; Covers</a></li>
+											<li><a href="" class="dropdown-item">Memory Cards</a></li>
+											<li><a href="" class="dropdown-item">Power Banks</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<section class="forms my-4 mx-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg px-5 pt-5">
+					<h5 class="font-weight-bold py-3">What do you want to buy today?</h5>
+					<ul class="list-unstyled d-inline-flex">
+						<li class="col-lg-5"><a href="#" class="btn btn-dark" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
+  								<path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+							</svg></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Mobiles</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-dark" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+  								<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+							</svg></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Laptops</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-light" >
+							<img src="C:/Users/LAXMI%20PRIYA/Downloads/air-conditioner-svgrepo-com.svg" width="60" height="60"></a>
+							<h5 class="my-2 mx-2"><a class="text-dark" href="#">Air conditioner</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-light" >
+							<img src="C:/Users/LAXMI%20PRIYA/Downloads/refrigerator-fridge-svgrepo-com.svg" width="60" height="60"></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Refrigerator</a></h5>
+						</li>
+					</ul>
+				</div>
+				<div id="collapse" style="display:none" class="px-5">
+    				<ul class="list-unstyled d-inline-flex">
+						<li class="col-lg-5"><a href="#" class="btn btn-light" >
+							<img src="C:/Users/LAXMI%20PRIYA/Downloads/dishwasher-svgrepo-com.svg" width="60" height="60"></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Dishwasher</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-light" >
+							<img src="C:/Users/LAXMI%20PRIYA/Downloads/washing-machine-svgrepo-com.svg" width="60" height="60"></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Washing Machine</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-dark" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+  								<path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+  							</svg></a>
+							<h5 class="my-2 mx-2"><a class="text-dark" href="#">Camera</a></h5>
+						</li>
+						<li class="col-lg-5"><a href="#" class="btn btn-dark" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+  								<path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+                            </svg></a>
+							<h5 class="my-2 mx-1"><a class="text-dark" href="#">Television</a></h5>
+						</li>
+					</ul>
+				</div>
+				<a href="#collapse" class="nav-toggle px-5 mb-5 mt-3">view more</a>
+			</div>
+		</div>
+	</section>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+
+</body>
+</html>
