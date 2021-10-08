@@ -52,7 +52,7 @@ li{
 	transition: 0.1s;
 }
 .container-fluid{
-	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/images%20(2).jfif");
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("images(2).jfif");
 	max-width: 150%;
 	height: 0 80 px;
 	justify-content: space-between;
