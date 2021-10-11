@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Price Compare-Mobiles</title>
+	<link href="nav.css" rel="stylesheet" type="text/css" media="all">
+	<link href="mobiles.css" rel="stylesheet" type="text/css" media="all">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  	<script src="https://kit.fontawesome.com/6b2b92f786.js" crossorigin="anonymous"></script>
+  	<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        	element.addEventListener('click', function (e) {
+        		e.stopPropagation();
+        	});
+        })
+    }); 
+	// DOMContentLoaded  end
+</script>
+<style type="text/css">
+	.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:50px; right:50px; width:90%; margin-top:0;  }
+	
+}	
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+		overflow-y: auto;
+	    max-height: 90vh;
+	    margin-top:4px;
+	}
+}
+</style> 
+<style type="text/css">
+    .Mobiles{
+    	background-color: dodgerblue;
+    }
+	.container{
+		background-color: white;
+		border-radius: 30px;
+		box-shadow:  12px 12px 22px gray;
+	}
+</style>
+</head>
+<body class="Mobiles">
+	<div class="container-fluid">
+		<div class="TopArea">
+			<div class="TopHeader ">
+				<b class="bold">Price compare</b>
+      			<button class='loginbtn'><a href="preprac.html">Login</a></button>
+				<form class="d-flex" id="searchInput">
+        			<input class="form-control me-2 btn btn-dark justify-content-md-center " type="search" placeholder="Search product or brand..." aria-label="Search">
+        			<button type="button" class="btn btn-primary">
+      					<span class="glyphicon glyphicon-search"></span> Search
+    				</button>
+      			</form>
+      		</div>
+			<nav class="navbar navbar-expand-lg justify-content-center " id="navbar">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+				</button>
+				<div class="collapse navbar-collapse justify-content-md-center" id="MenuItems">
+				<ul class="navbar-nav mr-2" style="color:black;">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle  " href="#" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;" href="#">Mobiles</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+     							<div class="col-lg-12 col-5">
+									<div class="col ">
+     									<h5 class="dropdown-header">Brand</h5>
+     									<ul class="list-unstyled">
+     										<li><a class="dropdown-item" href="Xiaomi.html">Xiaomi</a></li>
+     										<li><a class="dropdown-item" href="Samsung.html">Samsung</a></li>
+     										<li><a class="dropdown-item" href="Vivo.html">Vivo</a></li>
+     										<li><a class="dropdown-item" href="Oppo.html">Oppo</a></li>
+     										<li><a class="dropdown-item" href="Realme.html">Realme</a></li>
+     										<li><a class="dropdown-item" href="Apple.html">Apple</a></li>
+     										<li><a class="dropdown-item" href="OnePlus.html">Oneplus</a></li>
+     									</ul>
+     								</div>
+     							</div>
+     						</div>
+     					</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Laptops</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Budget</h5>
+										<ul class="list-unstyled">
+											<li><a href="HP.html" class="dropdown-item">HP</a></li>
+            								<li><a href="Dell.html" class="dropdown-item">Dell</a></li>
+            								<li><a href="MacLap.html" class="dropdown-item">Apple</a></li>
+            								<li><a href="Lenovo.html" class="dropdown-item">Lenovo</a></li>
+            								<li><a href="Acer.html" class="dropdown-item">Acer</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Refrigerators</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="LG.html" class="dropdown-item">LG</a></li>
+											<li><a href="Whirlpool.html" class="dropdown-item">Whirlpool</a></li>
+											<li><a href="Godrej.html" class="dropdown-item">Godrej</a></li>
+											<li><a href="Panasonic.html" class="dropdown-item">Panasonic</a></li>
+											<li><a href="Bosch.html" class="dropdown-item">Bosch</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" style="color: black;" href="#">Air Conditioners</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="SamsungAC.html" class="dropdown-item">Samsung</a></li>
+											<li><a href="LGAC.html" class="dropdown-item">LG</a></li>
+											<li><a href="GodrejAC.html" class="dropdown-item">Godrej</a></li>
+											<li><a href="DaikinAC.html" class="dropdown-item">Daikin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Washing Machines</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="LGWM.html" class="dropdown-item">LG</a></li>
+											<li><a href="SamsungWM.html" class="dropdown-item">Samsung</a></li>
+											<li><a href="WhirlpoolWM.html" class="dropdown-item">Whirlpool</a></li>
+											<li><a href="BoschWM.html" class="dropdown-item">Bosch</a></li>
+											<li><a href="HaierWM.html" class="dropdown-item">Haier</a></li>
+											<li><a href="GodrejWM.html" class="dropdown-item">Godrej</a></li>>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Televisions</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="SonyTV.html" class="dropdown-item">Sony</a></li>
+											<li><a href="OnePlusTV.html" class="dropdown-item">OnePlus</a></li>
+											<li><a href="LGTV.html" class="dropdown-item">LG</a></li>
+											<li><a href="SamsungTV.html" class="dropdown-item">Samsung</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"role="button" data-bs-toggle="dropdown" style="color: black;" href="#">Dishwashers</a>
+						<div class="dropdown-menu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-12 col-4">
+									<div class="col">
+										<h5 class="dropdown-header">Brand</h5>
+										<ul class="list-unstyled">
+											<li><a href="BoschDW.html" class="dropdown-item">Bosch</a></li>
+											<li><a href="Faber.html" class="dropdown-item">Faber</a></li>
+											<li><a href="LGDW.html" class="dropdown-item">LG</a></li>
+											<li><a href="Siemens.html" class="dropdown-item">Siemens</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: black;" href="#">Compare</a>
+					</li>
+					<li class="nav-item dropdown has-megamenu">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: black;" href="#">More</a>
+						<div class="dropdown-menu megamenu" role="menu">
+							<div class="row g-12">
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Popular Categories</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Mobiles</a></li>
+											<li><a href="#" class="dropdown-item">Tablets</a></li>
+											<li><a href="#" class="dropdown-item">Cameras</a></li>
+											<li><a href="#" class="dropdown-item">Laptops</a></li>
+											<li><a href="#" class="dropdown-item">Televisions</a></li>
+											<li><a href="#" class="dropdown-item">Air Conditioners</a></li>
+											<li><a href="#" class="dropdown-item">Shoes</a></li>
+											<li><a href="#" class="dropdown-item">Watches</a></li>
+											<li><a href="#" class="dropdown-item">Set Top Boxes</a></li>
+											<li><a href="#" class="dropdown-item">Speakers</a></li>
+											<li><a href="#" class="dropdown-item">Home Theatre Systems</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Home Appliances</h5>
+										<ul class="list-unstyled">
+											<li><a href="#" class="dropdown-item">Washing Machines &amp; Dryers</a></li>
+											<li><a href="#" class="dropdown-item">Refrigerators</a></li>
+											<li><a href="#" class="dropdown-item">Water Purifiers</a></li>
+											<li><a href="#" class="dropdown-item">Vacuum &amp; Window Cleaners</a></li>
+											<li><a href="#" class="dropdown-item">Microwave Ovens</a></li>
+											<li><a href="#" class="dropdown-item">Induction Cooktops</a></li>
+											<li><a href="#" class="dropdown-item">Juicer Mixer &amp; Grinder</a></li>
+											<li><a href="#" class="dropdown-item">Food Processors</a></li>
+											<li><a href="#" class="dropdown-item">Electric Kettle</a></li>
+											<li><a href="#" class="dropdown-item">Hand Blenders</a></li>
+											<li><a href="#" class="dropdown-item">Coffee Makers</a></li>
+											<li><a href="#" class="dropdown-item">Pop Up Toasters</a></li>
+											<li><a href="#" class="dropdown-item">Sandwich Maker</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Men's Clothing</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">T-Shirts</a></li>
+											<li><a href="" class="dropdown-item">Shirts</a></li>
+											<li><a href="" class="dropdown-item">Jeans</a></li>
+											<li><a href="" class="dropdown-item">Cargos</a></li>
+											<li><a href="" class="dropdown-item">Blazers</a></li>
+											<li><a href="" class="dropdown-item">Kurtas</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Women's Clothing</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Leggings</a></li>
+											<li><a href="" class="dropdown-item">Skirts</a></li>
+											<li><a href="" class="dropdown-item">Lingeries</a></li>
+											<li><a href="" class="dropdown-item">Night Wear</a></li>
+											<li><a href="" class="dropdown-item">Kurtis</a></li>
+											<li><a href="" class="dropdown-item">Sarees</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Bike Accessories</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Tyres</a></li>
+											<li><a href="" class="dropdown-item">Helmets</a></li>
+											<li><a href="" class="dropdown-item">Body Covers</a></li>
+											<li><a href="" class="dropdown-item">Seat Covers</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-4">
+									<div class="col-megamenu">
+										<h5 class="dropdown-header">Mobile Accessories</h5>
+										<ul class="list-unstyled">
+											<li><a href="" class="dropdown-item">Bluetooth Headsets</a></li>
+											<li><a href="" class="dropdown-item">Mobile Chargers</a></li>
+											<li><a href="" class="dropdown-item">Mobiles Cases &amp; Covers</a></li>
+											<li><a href="" class="dropdown-item">Memory Cards</a></li>
+											<li><a href="" class="dropdown-item">Power Banks</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</div>
+			</nav>
+		</div>
+  	</div>
+  	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Mi%2011X.png" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Mi 11X</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.67 inches (16.94 cm)</li>
+					<li>Front Camera 20 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4520 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (3.2 GHz, Single core, Kryo 585 + 2.42 GHz, Tri core, Kryo 585 + 1.8 GHz, Quad core, Kryo 585)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Redmi%20Note%2010S.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Redmi Note 10S</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.43 inches (16.33 cm)</li>
+					<li>Front Camera 13 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.05 GHz, Dual core, Cortex A76 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Mi%2011%20Lite).jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-5">
+				<h1 class="font-weight-bold py-3">Xiaomi Mi 11 Lite</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Rear Camera 64 MP + 8 MP + 5 MP</li>
+					<li>RAM 8 GB</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Mi%2011X%20Pro.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Mi 11X Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.67 inches (16.94 cm)</li>
+					<li>Front Camera 20 MP</li>
+					<li>Rear Camera 108 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4520 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 680 + 2.42 GHz, Tri core, Kryo 680 + 1.8 GHz, Quad core, Kryo 680)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Mi%2010i.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Mi 10i</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.67 inches (16.94 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 108 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4820 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Kryo 570 + 1.8 GHz, Hexa Core, Kryo 570)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Redmi%20Note%2010%20Pro%20Max.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Redmi Note 10 Pro Max</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.67 inches (16.94 cm)</li>
+					<li>Front Camera 16 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5020 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.3 GHz, Dual core, Kryo 470 + 1.8 GHz, Hexa Core, Kryo 470)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Redmi%20Note%2010.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Redmi Note 10</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.43 inches (16.33 cm)</li>
+					<li>Front Camera 13 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 4 GB</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Redmi%209%20Prime.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Redmi 9 Prime</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.53 inches (16.59 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 8 MP + 5 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5020 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Cortex A75 + 1.8 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Xiaomi%20Redmi%20Note%209.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Xiaomi Redmi Note 9</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.53 inches (16.59 cm)</li>
+					<li>Front Camera 13 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5020 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Cortex A75 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20M42%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy M42 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.4 inches (16.26 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Kryo 470 + 1.8 GHz, Hexa Core, Kryo 470)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20F02s.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy F02s</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 5 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Octa core, 1.8 GHz, Cortex A53</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20M31s.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy M31s</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 12 MP + 5 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.3 GHz, Quad core, Cortex A73 + 1.7 GHz, Quad core, Cortex A53)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20F62.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy F62</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.7 inches (17.02 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 12 MP + 5 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 7000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.73 GHz, Dual core + 2.31 GHz, Dual core, Cortex A75 + 1.95 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 ">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20F12.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy F12</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (2.3 GHz, Quad core, Cortex A73 + 1.7 GHz, Quad core, Cortex A53)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20M12.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy M12</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.7 inches (17.02 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 5 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 7000 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Octa core, 2 GHz, Cortex A55</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20A52.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy A52</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 12 MP + 5 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Kryo 570 + 1.8 GHz, Hexa Core, Kryo 570)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20S20%20FE.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy S20 FE</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 12 MP + 8 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.73 GHz, Dual core, M5 Mongoose + 2.5 GHz, Dual core, Cortex A76 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Samsung%20Galaxy%20F41.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Samsung Galaxy F41</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.4 inches (16.26 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.3 GHz, Quad core, Cortex A73 + 1.7 GHz, Quad core, Cortex A53)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20X60%20Pro.jpg" class="img-fluid" width="300" height="300" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo X60 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.56 inches (16.66 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 48 MP + 13 MP + 13 MP + 8 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4200 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.8 GHz, Single core, Cortex A78 + 2.6 GHz, Tri core, Cortex A78 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20iQOO%207.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo iQOO 7</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.56 inches (16.66 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 50 MP + 13 MP + 8 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 680 + 2.42 GHz, Tri core, Kryo 680 + 1.8 GHz, Quad core, Kryo 680)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20X60.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo X60</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.56 inches (16.66 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 48 MP + 13 MP + 13 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.8 GHz, Single core, Cortex A78 + 2.6 GHz, Tri core, Cortex A78 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20V20%20SE.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo V20 SE</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4100 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2 GHz, Quad core, Kryo 260 + 1.8 GHz, Quad core, Kryo 260)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20V20%202021.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo V20 2021</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 44 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Kryo 470 + 1.8 GHz, Hexa Core, Kryo 470)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20Y51%202020.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo Y51 2020</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.58 inches (16.71 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2 GHz, Quad core, Kryo 260 + 1.8 GHz, Quad core, Kryo 260)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20V19.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo V19</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 32 MP + 8 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.3 GHz, Dual core, Kryo 360 + 1.7 GHz, Hexa Core, Kryo 360)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20V20.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo V20</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 44 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.3 GHz, Dual core, Kryo 465 + 1.8 GHz, Hexa Core, Kryo 465)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Vivo%20Y20.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Vivo Y20</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.51 inches (16.54 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (1.8 GHz, Quad core, Kryo 240 + 1.6 GHz, Quad core, Kryo 240)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20F19%20Pro.jpg" class="img-fluid" width="300" height="300" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO F19 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.43 inches (16.33 cm)</li>
+					<li>Front Camera 16 MP + 2 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Cortex A75 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A74%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A74 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 48 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Kryo 460 + 1.8 GHz, Hexa Core, Kryo 460)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A53s%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A53s 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (1.8 GHz, Quad core, Cortex A73 + 1.8 GHz, Quad core, Cortex A53)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A15s.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A15s</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.52 inches (16.56 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4230 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core, 2.3 GHz, Cortex A53</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A15.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A15</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.52 inches (16.56 cm)</li>
+					<li>Front Camera 5 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4230 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Octa core, 2.3 GHz, Cortex A53</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20Reno%205%20Pro%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO Reno 5 Pro 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4350 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.6 GHz, Quad core, Cortex A77 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A52.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A52</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 12 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2 GHz, Quad core, Kryo 260 + 1.8 GHz, Quad core, Kryo 260)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20F17.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO F17</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 16 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4015 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2 GHz, Quad core, Kryo 260 + 1.8 GHz, Quad core, Kryo 260)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OPPO%20A53%202020.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OPPO A53 2020</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (1.8 GHz, Quad core, Kryo 240 + 1.6 GHz, Quad core, Kryo 240)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20X7%20Max.jpg" class="img-fluid" width="300" height="300" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme X7 Max</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.43 inches (16.33 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (3 GHz, Single core, Cortex A78 + 2.6 GHz, Tri core, Cortex A78 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%208%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme 8 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.2 GHz, Dual core, Cortex A76 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20Narzo%2030.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme Narzo 30</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.6 inches (16.76 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Cortex A75 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20C21.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme C21</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 5 MP</li>
+					<li>Rear Camera 13 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Octa core, 2.3 GHz, Cortex A53</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%208.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme 8</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Cortex A76 + 2 GHz, Hexa Core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%208%20Pro.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme 8 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.4 inches (16.26 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.3 GHz, Dual core, Kryo 465 + 1.8 GHz, Hexa Core, Kryo 465)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20Narzo%2030%20Pro.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme Narzo 30 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 12 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 5000 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.4 GHz, Quad core, Cortex A76 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 ">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20X7%20Pro.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme X7 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 64 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.6 GHz, Quad core, Cortex A77 + 2 GHz, Quad core, Cortex A55)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Realme%20C15.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Realme C15</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.52 inches (16.56 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 13 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 6000 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Octa core, 2.3 GHz, Cortex A53</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2012%20Mini.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 12 Mini</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 5.4 inches (13.72 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 2227 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Hexa Core (3.1 GHz, Dual core, Firestorm + 1.8 GHz, Quad core, Icestorm)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2012.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 12</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.1 inches (15.49 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 2815 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Hexa Core (3.1 GHz, Dual core, Firestorm + 1.8 GHz, Quad core, Icestorm)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%20SE%202020%20(iPhone%20SE%202).jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone SE 2020 (iPhone SE 2)</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 4.7 inches (11.94 cm)</li>
+					<li>Front Camera 7 MP</li>
+					<li>Rear Camera 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 1821 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Hexa Core (2.65 GHz, Dual core, Lightning + 1.8 GHz, Quad core, Thunder)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2011.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 11</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.1 inches (15.49 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 3110 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Hexa Core (2.65 GHz, Dual core, Lightning + 1.8 GHz, Quad core, Thunder)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2012%20Pro%20Max.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 12 Pro Max</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.7 inches (17.02 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 3687 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Hexa Core (3.1 GHz, Dual core, Firestorm + 1.8 GHz, Quad core, Icestorm)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%20XR.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone XR</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.1 inches (15.49 cm)</li>
+					<li>Front Camera 7 MP</li>
+					<li>Rear Camera 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 2942 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Hexa Core (2.49 GHz, Dual core, Vortex + 1.52 GHz, Quad core, Tempest)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2011%20Pro%20Max.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 11 Pro Max</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.5 inches (16.51 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 3969 mAh</li>
+					<li>RAM 4 GB</li>
+					<li>Processor Hexa Core (2.65 GHz, Dual core, Lightning + 1.8 GHz, Quad core, Thunder)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%2012%20Pro.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 12 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.1 inches (15.49 cm)</li>
+					<li>Front Camera 12 MP</li>
+					<li>Rear Camera 12 MP + 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 2815 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Hexa Core (3.1 GHz, Dual core, Firestorm + 1.8 GHz, Quad core, Icestorm)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/Apple%20iPhone%207%20Plus.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">Apple iPhone 7 Plus</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 5.5 inches (13.97 cm)</li>
+					<li>Front Camera 7 MP</li>
+					<li>Rear Camera 12 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 2900 mAh</li>
+					<li>RAM 3 GB</li>
+					<li>Processor Quad core (2.34 GHz, Dual core, Hurricane + 1.1 GHz, Dual core, Zephyr)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%209%20Pro%205G.jpg" class="img-fluid" width="300" height="300" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 9 Pro 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.78 inches (17.22 cm)</li>
+					<li>Front Camera 32 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 2 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 680 + 2.42 GHz, Tri core, Kryo 680 + 1.8 GHz, Quad core, Kryo 680)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%209R.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 9R</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 16 MP + 5 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 12 GB</li>
+					<li>Processor Octa core (2 GHz, Dual core, Kryo 460 + 1.8 GHz, Hexa Core, Kryo 460)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%209%205G.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 9 5G</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 48 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 680 + 2.42 GHz, Tri core, Kryo 680 + 1.8 GHz, Quad core, Kryo 680)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%208%20Pro.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 8 Pro</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.78 inches (17.22 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 48 MP + 8 MP + 5 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4510 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 585 + 2.42 GHz, Tri core, Kryo 585 + 1.8 GHz, Quad core, Kryo 585)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%208T.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 8T</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 16 MP + 5 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4500 mAh</li>
+					<li>RAM 12 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 585 + 2.42 GHz, Tri core, Kryo 585 + 1.8 GHz, Quad core, Kryo 585)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%20Nord.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus Nord</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.44 inches (16.36 cm)</li>
+					<li>Front Camera 32 MP + 8 MP</li>
+					<li>Rear Camera 48 MP + 8 MP + 5 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4115 mAh</li>
+					<li>RAM 12 GB</li>
+					<li>Processor Octa core (2.4 GHz, Single core, Kryo 475 + 2.2 GHz, Single core, Kryo 475 + 1.8 GHz, Hexa Core, Kryo 475)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%208.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 8</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 16 MP + 2 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 4300 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Octa core (2.84 GHz, Single core, Kryo 585 + 2.42 GHz, Tri core, Kryo 585 + 1.8 GHz, Quad core, Kryo 585)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%207T.jpg" class="img-fluid" width="300" height="500" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 7T</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 6.55 inches (16.64 cm)</li>
+					<li>Front Camera 16 MP</li>
+					<li>Rear Camera 48 MP + 16 MP + 12 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 3800 mAh</li>
+					<li>RAM 8 GB</li>
+					<li>Processor Octa core (2.96 GHz, Single core, Kryo 485 + 2.42 GHz, Tri core, Kryo 485 + 1.8 GHz, Quad core, Kryo 485)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-lg-2 py-5 mx-5 px-5">
+				<img src="C:/Users/LAXMI%20PRIYA/Desktop/career/MY%20PROJECT/html/images/OnePlus%203.jpg" class="img-fluid" width="100" height="100" alt="">
+			</div>
+			<div class="col-lg-4 px-5 pt-2">
+				<h1 class="font-weight-bold py-3">OnePlus 3</h1>
+				<ul>
+					<h5>Key Specification & Features</h5>
+					<li>Screen Size 5.5 inches (13.97 cm)</li>
+					<li>Front Camera 8 MP</li>
+					<li>Rear Camera 16 MP</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 py-5 pt-10">
+				<ul>
+					<li>Battery 3000 mAh</li>
+					<li>RAM 6 GB</li>
+					<li>Processor Quad core (2.2 GHz, Dual core, Kryo + 1.6 GHz, Dual core, Kryo)</li>
+				</ul>
+				<h6><a href="#" style="background-color:  #F65555; color: black; text-decoration: none; border-radius: 10px; font-size: 20px; padding: 0 8px;">view more</a></h6>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+</body>
+</html>
